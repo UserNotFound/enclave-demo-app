@@ -18,6 +18,8 @@ from models import Guidestep
 from worker import conn
 from worker import store_message
 
+from ddtrace import tracer
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'swiggityswooty'
